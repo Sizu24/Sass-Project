@@ -1,0 +1,35 @@
+/* ================================= CSS STYLES ================================= */
+/* ----- Typography ----- */
+
+* {
+    font-family: 'Lato', sans-serif;
+    color: $primary-txt;
+    box-sizing: border-box;
+  }
+
+.headline {
+
+    &-primary {
+        color: $secondary-color;
+        margin-left: 10px;
+    }
+    &-secondary{
+        font-weight: $txt-skinny;
+        color: $primary-color;
+    }
+}
+
+.link {
+    color: $secondary-txt;
+    font-weight: $txt-fat;
+}
+
+.blockquote {
+    font-size: 1.5em;
+    font-weight: $txt-skinny;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $secondary-color;
+    border-radius: 5px;
+  }
