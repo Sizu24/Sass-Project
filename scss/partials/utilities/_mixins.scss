@@ -1,0 +1,8 @@
+@mixin increase($num){
+    @media (min-width: $md-break) {
+       
+        flex-basis: ($num * 1/12) * $col-size;
+        
+    }
+
+}
