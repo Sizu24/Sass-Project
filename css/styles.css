@@ -1,3 +1,6 @@
+/* Button type and color to match. 
+Each loop goes through btn-colors map,
+creates class and assigns background-color. */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -387,6 +390,11 @@ a {
   flex-direction: column;
   padding: 1em 10px;
 }
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+}
 
 [class^=col] {
   margin-top: 10px;
@@ -502,6 +510,101 @@ a {
   .theme.col-12 {
     flex-basis: 100;
   }
+}
+
+.card {
+  flex-basis: 100%;
+}
+
+/* Navigation Styles */
+.nav {
+  padding-left: 0;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.nav-link {
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out, color, 0.2s ease-in-out;
+}
+.nav-link:hover {
+  color: #fff;
+  background-color: #58e1c1;
+}
+
+.form {
+  flex-basis: 100%;
+}
+
+.input {
+  display: block;
+  width: 94%;
+  margin: 10px auto 0;
+  border: none;
+  padding: 10px;
+  border-bottom: 5px solid #58e1c1;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Button styles */
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.default {
+  background-color: #51ddfc;
+}
+
+.error {
+  background-color: #e4757a;
+}
+
+.info {
+  background-color: #927bc1;
+}
+
+.success {
+  background-color: #63cc82;
+}
+
+.warning {
+  background-color: #fd7856;
+}
+
+/* Image styles */
+.img-logo, .img-frame, .img-avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-avatar {
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.img-frame {
+  margin-top: 10px;
+  max-width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
 }
 
 /*# sourceMappingURL=styles.css.map */

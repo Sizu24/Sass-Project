@@ -2,25 +2,34 @@
 
 .container {
     padding: 0 10px;
-  }
+}
   
-  .row {
+.row {
     display: flex;
     flex-direction: column;
     padding: 1em 10px;
-  }
+    @media (min-width: $md-break){
+        flex-direction: row;
+    }
+}
   
-  [class^=col] {
+[class^=col] {
     margin-top: 10px;
     flex-basis: $max;
     min-height: 25px;
     padding: 10px;
     border-radius: 5px;
-  }
+}
 
-  @for $i from 1 through 12 {
+@for $i from 1 through 12 {
     .theme.col-#{$i} {
         background-color: nth($colors, $i);
-        @include increase($i);
+        @media (min-width: $md-break) {
+            flex-basis: ($i * 1/12) * $col-size;
+        }
     }
 }
+
+.card {
+    flex-basis: $max;
+  }

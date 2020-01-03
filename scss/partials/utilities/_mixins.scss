@@ -1,8 +1,18 @@
-@mixin increase($num){
-    @media (min-width: $md-break) {
-       
-        flex-basis: ($num * 1/12) * $col-size;
-        
-    }
+// Mixins
 
+/* Button type and color to match. 
+Each loop goes through btn-colors map,
+creates class and assigns background-color. */
+
+@mixin create-buttons($buttons){
+  @each $btn-type, $color in $buttons{
+    .#{$btn-type}{
+      background-color: $color;
+    }
+  }
+}
+
+@mixin image-style{
+  margin-top: 10px;
+  max-width: $max;
 }
