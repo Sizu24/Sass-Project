@@ -16,14 +16,12 @@ a {
   text-decoration: none;
 }
   
-
 .headline {
-
   &-primary {
     color: $secondary-color;
     margin-left: 10px;
   }
-  &-secondary{
+  &-secondary {
     font-weight: $txt-skinny;
     color: $primary-txt;
   }
@@ -42,4 +40,4 @@ a {
   padding-left: 20px;
   border-left: 8px solid $secondary-color;
   border-radius: 5px;
-  }
+}

@@ -5,7 +5,7 @@
   flex-basis: $max;
   display: flex;
   flex-direction: column;
-  @include mq($md-break){
+  @include mq($md-break) {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center; 
@@ -23,9 +23,9 @@
       color: $secondary-txt;
       background-color: $secondary-color;
     }
-    @include mq($md-break){
-      flex-basis: 100px;
-    }
+  @include mq($md-break) {
+    flex-basis: 100px;
+  }
   }
 }
 

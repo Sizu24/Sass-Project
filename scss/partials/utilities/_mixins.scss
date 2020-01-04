@@ -1,18 +1,18 @@
 /* ==================== Mixins ==================== */
 
 /* Button type and color to match. 
-Each loop goes through btn-colors map,
-creates class and assigns background-color. */
+Each loop goes through btn-colors map inside mixin.scss file,
+creates button type class and assigns background-color. */
 
-@mixin create-buttons($buttons){
-  @each $btn-type, $color in $buttons{
-    .#{$btn-type}{
+@mixin create-buttons($buttons) {
+  @each $btn-type, $color in $buttons {
+    .#{$btn-type} {
       background-color: $color;
     }
   }
 }
 
-@mixin image-style{
+@mixin image-style {
   margin-top: 10px;
   max-width: $max;
 }
@@ -23,9 +23,9 @@ creates class and assigns background-color. */
   margin-right: auto;
 }
 
-//media querey mixin
-@mixin mq($size){
-  @media (min-width: $size){
+//media query mixin
+@mixin mq($size) {
+  @media (min-width: $size) {
     @content;
   }
 }

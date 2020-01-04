@@ -8,10 +8,10 @@
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
-  @include mq($md-break){
-      padding: 10px 30px;
+  @include mq($md-break) {
+    padding: 10px 30px;
   }
-  + .btn{
+  + .btn {
     margin-left: 10px;
   }
 }
