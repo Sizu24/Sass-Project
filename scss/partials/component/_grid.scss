@@ -1,35 +1,57 @@
-/* Grid styles */
+/* ==================== Grid styles ==================== */
 
 .container {
-    padding: 0 10px;
+  padding: 0 10px;
+  @include mq($md-break){
+    max-width: 1400px;
+    @include center;
+  }
 }
-  
+.centered {
+  @include mq($md-break){
+    @include center;
+  }
+}
 .row {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 10px;
-    @media (min-width: $md-break){
-        flex-direction: row;
-    }
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+  @include mq($md-break){
+    flex-direction: row;
+  }
 }
   
 [class^=col] {
-    margin-top: 10px;
-    flex-basis: $max;
-    min-height: 25px;
-    padding: 10px;
-    border-radius: 5px;
+  margin-top: 10px;
+  flex-basis: $max;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  @include mq($md-break){
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
+  + [class^=col] {
+    @include mq($md-break){
+      margin-left: 10px;
+    }
+  }
 }
+
+
 
 @for $i from 1 through 12 {
-    .theme.col-#{$i} {
-        background-color: nth($colors, $i);
-        @media (min-width: $md-break) {
-            flex-basis: ($i * 1/12) * $col-size;
-        }
-    }
-}
-
-.card {
-    flex-basis: $max;
+  .theme.col-#{$i} {
+    background-color: nth($colors, $i);
   }
+  .col-#{$i} {
+    @include mq($md-break){
+      flex-basis: ($i * 1/12) * $col-size;
+    }
+  }
+}
+.card {
+  flex-basis: $max;
+}

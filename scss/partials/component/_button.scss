@@ -1,13 +1,19 @@
-/* Button styles */
+/* ==================== Button styles ==================== */
 
 .btn {
-    margin-top: 15px;
-    width: $max;
-    color: $secondary-txt;
-    border: none;
-    padding: 10px 0;
-    text-transform: uppercase;
-    border-radius: 5px;
+  margin-top: 15px;
+  width: $max;
+  color: $secondary-txt;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  @include mq($md-break){
+      padding: 10px 30px;
+  }
+  + .btn{
+    margin-left: 10px;
+  }
 }
 
 @include create-buttons($btn-colors);

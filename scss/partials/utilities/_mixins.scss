@@ -1,4 +1,4 @@
-// Mixins
+/* ==================== Mixins ==================== */
 
 /* Button type and color to match. 
 Each loop goes through btn-colors map,
@@ -15,4 +15,17 @@ creates class and assigns background-color. */
 @mixin image-style{
   margin-top: 10px;
   max-width: $max;
+}
+
+@mixin center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//media querey mixin
+@mixin mq($size){
+  @media (min-width: $size){
+    @content;
+  }
 }
