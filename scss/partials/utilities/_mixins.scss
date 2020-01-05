@@ -1,13 +1,18 @@
 /* ==================== Mixins ==================== */
 
 /* Button type and color to match. 
-Each loop goes through btn-colors map inside mixin.scss file,
-creates button type class and assigns background-color. */
+Each loop goes through btn-colors map inside mixin file,
+creates class and assigns background-color. Also adds hover transition to
+lighten button background color */
 
 @mixin create-buttons($buttons) {
   @each $btn-type, $color in $buttons {
     .#{$btn-type} {
       background-color: $color;
+      transition: background-color .2s ease-in;
+      &:hover {
+        background-color: lighten($color, 15%);
+      }
     }
   }
 }
@@ -23,7 +28,7 @@ creates button type class and assigns background-color. */
   margin-right: auto;
 }
 
-//media query mixin
+//media query breakpoint mixin
 @mixin mq($size) {
   @media (min-width: $size) {
     @content;

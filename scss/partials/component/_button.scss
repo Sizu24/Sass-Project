@@ -11,9 +11,8 @@
   @include mq($md-break) {
     padding: 10px 30px;
     + .btn {
-      margin-left: 10px;
+    margin-left: 10px;
     }
   }
 }
-
 @include create-buttons($btn-colors);
